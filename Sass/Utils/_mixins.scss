@@ -1,0 +1,13 @@
+@mixin buttons {
+    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    &:hover {
+        cursor: pointer;
+        opacity: 85%;
+    }
+}
