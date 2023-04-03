@@ -1,4 +1,47 @@
 @import "./Utils/mixins";
 @import "./Utils/variables";
 @import "./Base/base";
+@import "./Layouts/footer";
 
+.entete {
+    text-align: center;
+    &__logo {
+        position: relative;
+        background: $secondary-background;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+    &__logo img {
+        width: 162px;
+        padding: 14px 0 5px 0;
+    }
+    &__search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+        background: $light-grey;
+        color: $dark-grey;
+        padding: 15.5px 0;    
+    }
+    &__title {
+        margin: 39.5px 58px 0 42px;
+    }
+    &__paragraph {
+        font-weight: 300;
+        font-size: 18px;
+        margin: 10px 26px 0 34px;
+    }
+    &__btn {
+        @include btn;
+        margin-top: 27px;
+        margin-bottom: 57px;
+        padding: 13px 18.75px;
+    }
+}
+
+.order {
+    background: $secondary-background;
+    .order__title {
+        border: 1px solid black;
+    }
+}

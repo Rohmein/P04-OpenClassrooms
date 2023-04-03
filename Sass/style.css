@@ -1,7 +1,74 @@
 * {
-  max-width: 375px;
   margin: 0;
-  padding: 0;
+}
+
+body {
+  max-width: 375px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background: #F7F7F7;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+footer {
+  background-color: #353535;
+}
+
+.entete {
+  text-align: center;
+}
+.entete__logo {
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.entete__logo img {
+  width: 162px;
+  padding: 14px 0 5px 0;
+}
+.entete__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  background: #EAEAEA;
+  color: #353535;
+  padding: 15.5px 0;
+}
+.entete__title {
+  margin: 39.5px 58px 0 42px;
+}
+.entete__paragraph {
+  font-weight: 300;
+  font-size: 18px;
+  margin: 10px 26px 0 34px;
+}
+.entete__btn {
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  margin-top: 27px;
+  margin-bottom: 57px;
+  padding: 13px 18.75px;
+}
+.entete__btn:hover {
+  cursor: pointer;
+  opacity: 85%;
+}
+
+.order {
+  background: #FFFFFF;
+}
+.order .order__title {
+  border: 1px solid black;
 }/*# sourceMappingURL=style.css.map */
