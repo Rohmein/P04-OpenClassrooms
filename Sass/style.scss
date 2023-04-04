@@ -41,9 +41,10 @@
 
 .order {
     background: $secondary-background;
+    padding-top: 48px;
+    padding-bottom: 68px;
     &__title {
         margin-left: 20px;
-        padding-top: 48px;
     }
     &__nav {
         display: flex;
@@ -53,11 +54,6 @@
     }
     &__btn {
         @include order-btn;
-        position: relative;
-        display: flex;
-        padding: 20px 38px 20px 33px;
-        margin-right: 20px;
-        margin-left: 32.51px;
     }
     &__btn1 {
         gap: 27px;
@@ -79,5 +75,75 @@
 .btn1, .btn2, .btn3 {
     &__number {
         @include order-number;
+    }
+}
+
+.restaurant {
+    &__title {
+        margin-top: 54px;
+        margin-left: 20px;
+    }
+}
+
+.card {
+        position: relative;
+        background: $secondary-background;
+        margin: 20px 18px 0 17px;
+        border-radius: 15px;    
+    &__photo {
+        @include restaurant-photo
+    }
+    &__bottom {
+        object-position: bottom;
+    }
+    &__center {
+        object-position: center 61%;
+    }
+    &__nouveau {
+        @include restaurant-badge;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text {
+        margin: 16px 0 12px 13px;
+    }
+    &__subtitle {
+        font-weight: 300;
+        font-size: 17px;
+        margin-top: 5px;
+    }
+    &__heart {
+        margin-right: 25px;
+    }
+}
+
+.pied {
+    margin-top: 66px;
+    padding: 22px 0 22px 25px;
+    &__logo img {
+        width: 95px;
+        filter: invert(100%);
+        margin: 0 0 16px 0;
+    }
+    &__proposition {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin-bottom: 7px;
+    }
+    &__partenaire {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-bottom: 7px;
+    }
+    &__subtitle {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        font-weight: 400;
     }
 }
