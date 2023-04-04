@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -69,6 +70,51 @@ footer {
 .order {
   background: #FFFFFF;
 }
-.order .order__title {
-  border: 1px solid black;
+.order__title {
+  margin-left: 20px;
+  padding-top: 48px;
+}
+.order__nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 26px;
+  gap: 24.92px;
+}
+.order__btn {
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  padding: 20px 38px 20px 33px;
+  margin-right: 20px;
+  margin-left: 32.51px;
+}
+.order__btn1 {
+  gap: 27px;
+}
+.order__btn2 {
+  gap: 23px;
+}
+.order__btn3 {
+  gap: 20px;
+}
+.order__icon1, .order__icon2 {
+  color: #7E7E7E;
+}
+.order__icon3 {
+  color: #9356DC;
+}
+
+.btn1__number, .btn2__number, .btn3__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 310px;
+  width: 24px;
+  height: 24px;
+  background: #9356DC;
+  color: #FFFFFF;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */

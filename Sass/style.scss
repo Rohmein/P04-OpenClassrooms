@@ -41,7 +41,43 @@
 
 .order {
     background: $secondary-background;
-    .order__title {
-        border: 1px solid black;
+    &__title {
+        margin-left: 20px;
+        padding-top: 48px;
+    }
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 26px;
+        gap: 24.92px;
+    }
+    &__btn {
+        @include order-btn;
+        position: relative;
+        display: flex;
+        padding: 20px 38px 20px 33px;
+        margin-right: 20px;
+        margin-left: 32.51px;
+    }
+    &__btn1 {
+        gap: 27px;
+    }
+    &__btn2 {
+        gap: 23px;
+    }
+    &__btn3 {
+        gap: 20px;
+    }
+    &__icon1, &__icon2 {
+        color: $medium-grey;
+    }
+    &__icon3 {
+        color: $primary-color;
+    }
+}
+
+.btn1, .btn2, .btn3 {
+    &__number {
+        @include order-number;
     }
 }
