@@ -22,11 +22,42 @@ h2 {
   font-size: 18px;
 }
 
+.menus {
+  background: #353535;
+}
+
+.menus h1 {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.menus h2 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.menus h3 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.menus__subtitle {
+  font-weight: 300;
+  font-size: 15.0431px;
+}
+
+.menus__price {
+  font-weight: 700;
+}
+
 footer {
   background-color: #353535;
   color: #FFFFFF;
 }
 
+/*** Page d'accueil ***/
 .entete {
   text-align: center;
 }
@@ -180,8 +211,8 @@ footer {
 }
 
 .pied {
-  margin-top: 66px;
   padding: 22px 0 22px 25px;
+  margin-top: 66px;
 }
 .pied__logo img {
   width: 95px;
@@ -201,6 +232,119 @@ footer {
   margin-bottom: 7px;
 }
 .pied__subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 400;
+}
+
+/*** Premier restaurant ***/
+.menu-entete {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.menu-entete__arrow {
+  color: #353535;
+  margin-left: 23px;
+}
+.menu-entete__logo img {
+  width: 162px;
+  padding: 14px 0 5px 0;
+  margin-left: 66px;
+}
+
+.menus__photo {
+  display: block;
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.menus__content {
+  position: relative;
+  background: #F7F7F7;
+  border-radius: 40px 40px 0 0;
+  margin-top: -55px;
+}
+.menus__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 41px 0 17px;
+  padding-top: 32px;
+}
+.menus__dish h2 {
+  position: relative;
+  margin: 40px 0 0 13px;
+}
+.menus__dish h2::after {
+  content: "";
+  position: absolute;
+  border: 2px solid #99E2D0;
+  top: 23px;
+  left: 0;
+  width: 36px;
+}
+.menus__navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+.menus__choice {
+  background: #FFFFFF;
+  border-radius: 15.0431px;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  padding: 12px 13px 12px 15px;
+  margin: 0 13px;
+}
+.menus__subtitle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3px;
+}
+.menus__btn {
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  margin: auto;
+  width: 186px;
+  margin-top: 28px;
+  padding: 13px 16px;
+}
+.menus__btn:hover {
+  cursor: pointer;
+  opacity: 85%;
+}
+
+.menus-pied {
+  padding: 22px 0 22px 25px;
+  margin-top: 40px;
+}
+.menus-pied__logo img {
+  width: 95px;
+  filter: invert(100%);
+  margin: 0 0 16px 0;
+}
+.menus-pied__proposition {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 7px;
+}
+.menus-pied__partenaire {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 7px;
+}
+.menus-pied__subtitle {
   display: flex;
   flex-direction: column;
   gap: 7px;

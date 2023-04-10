@@ -3,6 +3,8 @@
 @import "./Base/base";
 @import "./Layouts/footer";
 
+/*** Page d'accueil ***/
+
 .entete {
     text-align: center;
     &__logo {
@@ -121,29 +123,21 @@
 }
 
 .pied {
+    @include footer;
     margin-top: 66px;
-    padding: 22px 0 22px 25px;
-    &__logo img {
-        width: 95px;
-        filter: invert(100%);
-        margin: 0 0 16px 0;
-    }
-    &__proposition {
-        display: flex;
-        align-items: center;
-        gap: 11px;
-        margin-bottom: 7px;
-    }
-    &__partenaire {
-        display: flex;
-        align-items: center;
-        gap: 9px;
-        margin-bottom: 7px;
-    }
-    &__subtitle {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-        font-weight: 400;
-    }
+}
+
+/*** Premier restaurant ***/
+
+.menu-entete {
+    @include menus-header;
+}
+
+.menus {
+    @include menus-main;
+}
+
+.menus-pied {
+    @include footer;
+    margin-top: 40px;
 }

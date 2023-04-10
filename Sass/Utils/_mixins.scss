@@ -53,3 +53,105 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
 }
+
+@mixin menus-header {
+    display: flex;
+    align-items: center;
+    background: $secondary-background;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    &__arrow {
+        color: $dark-grey;
+        margin-left: 23px;
+    }
+    &__logo img {
+        width: 162px;
+        padding: 14px 0 5px 0;
+        margin-left: 66px;
+    }
+}
+
+@mixin menus-main {
+    &__photo { 
+        display: block;   
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+    }
+    &__content {
+        position: relative;
+        background: $primary-background;
+        border-radius: 40px 40px 0 0;
+        margin-top: -55px;
+    }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 41px 0 17px;
+        padding-top: 32px;
+    }
+    &__dish h2 {
+        position: relative;
+        margin: 40px 0 0 13px;
+    }
+    &__dish h2::after {
+        content: "";
+        position: absolute;
+        border: 2px solid $light-green;
+        top: 23px;
+        left: 0;
+        width: 36px;
+    }
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+    }
+    &__choice {
+        background: $secondary-background;
+        border-radius: 15.0431px;
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+        padding: 12px 13px 12px 15px;
+        margin: 0 13px;
+    }
+    &__subtitle {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3px;
+    }
+    &__btn {
+        @include btn;
+        margin: auto;
+        width: 186px;
+        margin-top: 28px;
+        padding: 13px 16px;
+    }
+}
+
+@mixin footer {
+    padding: 22px 0 22px 25px;
+    &__logo img {
+        width: 95px;
+        filter: invert(100%);
+        margin: 0 0 16px 0;
+    }
+    &__proposition {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin-bottom: 7px;
+    }
+    &__partenaire {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-bottom: 7px;
+    }
+    &__subtitle {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        font-weight: 400;
+    }
+}

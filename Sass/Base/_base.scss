@@ -21,3 +21,33 @@ h2 {
     font-weight: 700;
     font-size: 18px;
 }
+
+.menus {
+    background: $dark-grey;    
+}
+
+.menus h1 {
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.menus h2 {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.menus h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.menus__subtitle {
+    font-weight: 300;
+    font-size: 15.0431px;
+}
+
+.menus__price {
+    font-weight: 700;
+}
