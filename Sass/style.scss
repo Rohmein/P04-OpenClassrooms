@@ -31,7 +31,7 @@
     &__paragraph {
         font-weight: 300;
         font-size: 18px;
-        margin: 10px 26px 0 34px;
+        margin-top: 10px;
     }
     &__btn {
         @include btn;
@@ -81,53 +81,64 @@
 }
 
 .restaurant {
-    &__title {
-        margin-top: 54px;
-        margin-left: 20px;
+        &__title {
+            margin-top: 54px;
+            margin-left: 20px;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin: 20px 18px 66px 17px;
     }
 }
 
 .card {
-        position: relative;
-        background: $secondary-background;
-        margin: 20px 18px 0 17px;
-        border-radius: 15px;    
-    &__photo {
-        @include restaurant-photo
-    }
-    &__bottom {
-        object-position: bottom;
-    }
-    &__center {
-        object-position: center 61%;
-    }
-    &__nouveau {
-        @include restaurant-badge;
-    }
-    &__content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__text {
-        margin: 16px 0 12px 13px;
-    }
-    &__subtitle {
-        font-weight: 300;
-        font-size: 17px;
-        margin-top: 5px;
-    }
-    &__heart {
-        margin-right: 25px;
-    }
+    background: $secondary-background;        
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        &__photo-badge {
+            position: relative;
+        }    
+        &__photo {
+            @include restaurant-photo
+        }
+        &__bottom {
+            object-position: bottom;
+        }
+        &__center {
+                object-position: center 61%;
+        }
+        &__nouveau {
+            @include restaurant-badge;
+        }
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__text {
+            margin: 16px 0 12px 13px;
+        }
+        &__subtitle {
+            font-weight: 300;
+            font-size: 17px;
+            margin-top: 5px;
+        }
+        &__heart {
+            margin-right: 25px;
+        }
 }
 
 .pied {
     @include footer;
-    margin-top: 66px;
 }
 
-/*** Premier restaurant ***/
+/*** Pages des menus ***/
 
 .menu-entete {
     @include menus-header;
@@ -139,5 +150,127 @@
 
 .menus-pied {
     @include footer;
-    margin-top: 40px;
+}
+
+/*** Responsive - Accueil ***/
+
+@media screen and (min-width: 1440px) {
+    .entete {
+        &__title {
+            font-size: 40px;
+        }
+        &__paragraph {
+            margin-top: 18px;
+        }
+        &__btn {
+            margin-bottom: 30px;
+        }
+    }
+    .order {
+        &__content {
+            margin-right: 175.68px;
+            margin-left: 175.68px;
+        }
+        &__nav {
+            flex-direction: row;
+            justify-content: center;
+            gap: 36.51px;
+        }
+        &__btn {
+            margin-left: 0;
+            margin-right: 0;
+            padding-right: 75px;
+        }
+    }
+
+    .restaurant {
+        margin-right: 175.68px;
+        margin-left: 175.68px;
+        &__cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 100px;
+            row-gap: 50px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .card {
+        &__bottom-desktop {
+            object-position: center 65%;
+        }
+        &__center-desktop {
+            object-position: center 57%;
+        }
+    }
+
+    .pied {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        &__logo {
+            vertical-align: baseline;
+            margin-top: 46px;
+            margin-right: 60px;
+        }
+        &__text {
+            display: flex;
+            margin-top: 42px;
+            margin-right: 75px;
+        }
+        &__subtitle {
+            flex-direction: row;
+            margin-left: 45px;
+            gap: 14px;
+        }
+        &__partenaire {
+            margin-left: 8px;
+        }
+    }
+}
+
+/*** Responsive - Menus ***/
+
+@media screen and (min-width: 1440px) {
+    .menus {
+        &__title {
+            justify-content: center;
+            gap: 24px;
+            padding-top: 51px;
+        }
+        &__photo {
+            object-position: center 64%;
+        }
+        &__content {
+            margin: -35px 192px 0 193px;
+        }
+        &__dish {
+            margin: 0 211px 0 210px;
+        }
+    }
+
+    .pied {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: 0;
+        &__logo {
+            vertical-align: baseline;
+            margin-top: 46px;
+            margin-right: 60px;
+        }
+        &__text {
+            display: flex;
+            margin-top: 42px;
+            margin-right: 75px;
+        }
+        &__subtitle {
+            flex-direction: row;
+            margin-left: 45px;
+            gap: 14px;
+        }
+        &__partenaire {
+            margin-left: 8px;
+        }
+    }
 }

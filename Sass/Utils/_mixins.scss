@@ -20,7 +20,7 @@
     border-radius: 20px;
     margin-right: 20px;
     margin-left: 32.51px;
-    padding: 20px 38px 20px 33px;
+    padding: 28.59px 0 28.12px 33.47px;
 }
 
 @mixin order-number {
@@ -28,7 +28,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 310px;
+    left: -12px;
     width: 24px;
     height: 24px;
     background: $primary-color;
@@ -54,19 +54,23 @@
     border-radius: 2px;
 }
 
+/*** Mixins - Menus ***/
+
 @mixin menus-header {
+    position: relative;
     display: flex;
-    align-items: center;
+    justify-content: center;
     background: $secondary-background;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     &__arrow {
+        position: absolute;
         color: $dark-grey;
-        margin-left: 23px;
+        top: 14px;
+        left: 23px;
     }
     &__logo img {
         width: 162px;
-        padding: 14px 0 5px 0;
-        margin-left: 66px;
+        margin: 14px 0 5px 0;
     }
 }
 
@@ -125,6 +129,7 @@
         margin: auto;
         width: 186px;
         margin-top: 28px;
+        margin-bottom: 40px;
         padding: 13px 16px;
     }
 }
@@ -153,5 +158,31 @@
         flex-direction: column;
         gap: 7px;
         font-weight: 400;
+    }
+}
+
+@mixin footer-desktop {
+    .pied {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        &__logo {
+            vertical-align: baseline;
+            margin-top: 46px;
+            margin-right: 60px;
+        }
+        &__text {
+            display: flex;
+            margin-top: 42px;
+            margin-right: 75px;
+        }
+        &__subtitle {
+            flex-direction: row;
+            margin-left: 45px;
+            gap: 14px;
+        }
+        &__partenaire {
+            margin-left: 8px;
+        }
     }
 }

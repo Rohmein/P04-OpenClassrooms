@@ -1,10 +1,12 @@
+/*** Mixins - Menus ***/
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  max-width: 375px;
+  max-width: 1440px;
+  margin: auto;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -23,7 +25,7 @@ h2 {
 }
 
 .menus {
-  background: #353535;
+  background: #FFFFFF;
 }
 
 .menus h1 {
@@ -85,7 +87,7 @@ footer {
 .entete__paragraph {
   font-weight: 300;
   font-size: 18px;
-  margin: 10px 26px 0 34px;
+  margin-top: 10px;
 }
 .entete__btn {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
@@ -126,7 +128,7 @@ footer {
   border-radius: 20px;
   margin-right: 20px;
   margin-left: 32.51px;
-  padding: 20px 38px 20px 33px;
+  padding: 28.59px 0 28.12px 33.47px;
 }
 .order__btn1 {
   gap: 27px;
@@ -149,7 +151,7 @@ footer {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 310px;
+  left: -12px;
   width: 24px;
   height: 24px;
   background: #9356DC;
@@ -161,12 +163,24 @@ footer {
   margin-top: 54px;
   margin-left: 20px;
 }
+.restaurant a {
+  color: black;
+  text-decoration: none;
+}
+.restaurant__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 20px 18px 66px 17px;
+}
 
 .card {
-  position: relative;
   background: #FFFFFF;
-  margin: 20px 18px 0 17px;
   border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.card__photo-badge {
+  position: relative;
 }
 .card__photo {
   width: 100%;
@@ -212,7 +226,6 @@ footer {
 
 .pied {
   padding: 22px 0 22px 25px;
-  margin-top: 66px;
 }
 .pied__logo img {
   width: 95px;
@@ -238,21 +251,23 @@ footer {
   font-weight: 400;
 }
 
-/*** Premier restaurant ***/
+/*** Pages des menus ***/
 .menu-entete {
+  position: relative;
   display: flex;
-  align-items: center;
+  justify-content: center;
   background: #FFFFFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .menu-entete__arrow {
+  position: absolute;
   color: #353535;
-  margin-left: 23px;
+  top: 14px;
+  left: 23px;
 }
 .menu-entete__logo img {
   width: 162px;
-  padding: 14px 0 5px 0;
-  margin-left: 66px;
+  margin: 14px 0 5px 0;
 }
 
 .menus__photo {
@@ -316,6 +331,7 @@ footer {
   margin: auto;
   width: 186px;
   margin-top: 28px;
+  margin-bottom: 40px;
   padding: 13px 16px;
 }
 .menus__btn:hover {
@@ -325,7 +341,6 @@ footer {
 
 .menus-pied {
   padding: 22px 0 22px 25px;
-  margin-top: 40px;
 }
 .menus-pied__logo img {
   width: 95px;
@@ -349,4 +364,116 @@ footer {
   flex-direction: column;
   gap: 7px;
   font-weight: 400;
+}
+
+/*** Responsive - Accueil ***/
+@media screen and (min-width: 1440px) {
+  .entete__title {
+    font-size: 40px;
+  }
+  .entete__paragraph {
+    margin-top: 18px;
+  }
+  .entete__btn {
+    margin-bottom: 30px;
+  }
+  .order__content {
+    margin-right: 175.68px;
+    margin-left: 175.68px;
+  }
+  .order__nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 36.51px;
+  }
+  .order__btn {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 75px;
+  }
+  .restaurant {
+    margin-right: 175.68px;
+    margin-left: 175.68px;
+  }
+  .restaurant__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 50px;
+    margin-bottom: 30px;
+  }
+  .card__bottom-desktop {
+    -o-object-position: center 65%;
+       object-position: center 65%;
+  }
+  .card__center-desktop {
+    -o-object-position: center 57%;
+       object-position: center 57%;
+  }
+  .pied {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .pied__logo {
+    vertical-align: baseline;
+    margin-top: 46px;
+    margin-right: 60px;
+  }
+  .pied__text {
+    display: flex;
+    margin-top: 42px;
+    margin-right: 75px;
+  }
+  .pied__subtitle {
+    flex-direction: row;
+    margin-left: 45px;
+    gap: 14px;
+  }
+  .pied__partenaire {
+    margin-left: 8px;
+  }
+}
+/*** Responsive - Menus ***/
+@media screen and (min-width: 1440px) {
+  .menus__title {
+    justify-content: center;
+    gap: 24px;
+    padding-top: 51px;
+  }
+  .menus__photo {
+    -o-object-position: center 64%;
+       object-position: center 64%;
+  }
+  .menus__content {
+    margin: -35px 192px 0 193px;
+  }
+  .menus__dish {
+    margin: 0 211px 0 210px;
+  }
+  .pied {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 0;
+  }
+  .pied__logo {
+    vertical-align: baseline;
+    margin-top: 46px;
+    margin-right: 60px;
+  }
+  .pied__text {
+    display: flex;
+    margin-top: 42px;
+    margin-right: 75px;
+  }
+  .pied__subtitle {
+    flex-direction: row;
+    margin-left: 45px;
+    gap: 14px;
+  }
+  .pied__partenaire {
+    margin-left: 8px;
+  }
 }/*# sourceMappingURL=style.css.map */
