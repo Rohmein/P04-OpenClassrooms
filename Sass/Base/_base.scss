@@ -4,7 +4,8 @@
 }
 
 body {
-    max-width: 375px;
+    max-width: 1440px;
+    margin: auto;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -23,7 +24,7 @@ h2 {
 }
 
 .menus {
-    background: $dark-grey;    
+    background: $secondary-background;    
 }
 
 .menus h1 {
