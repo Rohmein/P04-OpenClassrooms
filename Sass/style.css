@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*** Mixins - Menus ***/
 * {
   margin: 0;
@@ -43,6 +44,21 @@ h2 {
 .menus h3 {
   font-weight: 500;
   font-size: 18px;
+  width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-mask-image: linear-gradient(to right, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0));
+          mask-image: linear-gradient(to right, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0));
+}
+
+.menus__recipe {
+  width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-mask-image: linear-gradient(to right, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0));
+          mask-image: linear-gradient(to right, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0));
 }
 
 .menus__subtitle {
@@ -97,10 +113,10 @@ footer {
   font-weight: 500;
   font-size: 16px;
   border: none;
+  transition: opacity 600ms, box-shadow 600ms;
   margin-top: 27px;
   margin-bottom: 57px;
   padding: 13px 18.75px;
-  transition: opacity 600ms, box-shadow 600ms;
 }
 .entete__btn:hover {
   opacity: 80%;
@@ -227,6 +243,7 @@ footer {
 .card__heart--full {
   position: relative;
   opacity: 0;
+  transition: opacity 600ms;
 }
 .card__heart--empty {
   position: absolute;
@@ -374,11 +391,21 @@ footer {
   font-weight: 500;
   font-size: 16px;
   border: none;
+  transition: opacity 600ms, box-shadow 600ms;
   margin: auto;
   width: 186px;
   margin-top: 28px;
   margin-bottom: 40px;
   padding: 13px 16px;
+  transition: opacity 600ms, box-shadow 600ms;
+}
+.menus__btn:hover {
+  opacity: 80%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+.menus__btn:hover {
+  opacity: 80%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 .menus-pied {
@@ -408,7 +435,47 @@ footer {
   font-weight: 400;
 }
 
-/*** Responsive - Accueil ***/
+/*** Responsive Mobile ≥768px - Accueil ***/
+@media screen and (min-width: 768px) {
+  .order__title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .order__nav {
+    width: 70%;
+    margin: auto;
+  }
+}
+/*** Responsive Tablette - Accueil ***/
+@media screen and (min-width: 1024px) {
+  .order__title {
+    text-align: center;
+  }
+  .order__nav {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 36.51px;
+  }
+  .order__btn {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 30px;
+  }
+  .restaurant {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  .restaurant__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 50px;
+    margin-bottom: 30px;
+  }
+}
+/*** Responsive Desktop - Accueil ***/
 @media screen and (min-width: 1440px) {
   .entete__title {
     font-size: 40px;
@@ -418,6 +485,10 @@ footer {
   }
   .entete__btn {
     margin-bottom: 30px;
+  }
+  .order__title {
+    text-align: start;
+    margin-left: 20px;
   }
   .order__content {
     margin-right: 175.68px;

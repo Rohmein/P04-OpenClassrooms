@@ -38,11 +38,6 @@
         margin-top: 27px;
         margin-bottom: 57px;
         padding: 13px 18.75px;
-        transition: opacity 600ms, box-shadow 600ms;
-        &:hover {
-            opacity: 80%;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-        }
     }
 }
 
@@ -138,7 +133,8 @@
             margin-right: 25px;
             &--full {
                 position: relative;
-                opacity: 0;               
+                opacity: 0;
+                transition: opacity 600ms;               
             }
             &--empty {
                 position: absolute;
@@ -173,7 +169,54 @@
     @include footer;
 }
 
-/*** Responsive - Accueil ***/
+/*** Responsive Mobile ≥768px - Accueil ***/
+
+@media screen and (min-width: 768px) {
+    .order {
+        &__title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        &__nav {
+            width: 70%;
+            margin: auto;
+        }
+    }
+}
+
+/*** Responsive Tablette - Accueil ***/
+
+@media screen and (min-width: 1024px) {
+    .order {
+        &__title {
+            text-align: center;
+        }
+        &__nav {
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            gap: 36.51px;
+        }
+        &__btn {
+            margin-left: 0;
+            margin-right: 0;
+            padding-right: 30px;
+        }
+    }
+    .restaurant {
+        margin-right: 100px;
+        margin-left: 100px;
+        &__cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 100px;
+            row-gap: 50px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/*** Responsive Desktop - Accueil ***/
 
 @media screen and (min-width: 1440px) {
     .entete {
@@ -188,6 +231,10 @@
         }
     }
     .order {
+        &__title {
+            text-align: start;
+            margin-left: 20px;
+        }
         &__content {
             margin-right: 175.68px;
             margin-left: 175.68px;
