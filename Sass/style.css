@@ -100,10 +100,11 @@ footer {
   margin-top: 27px;
   margin-bottom: 57px;
   padding: 13px 18.75px;
+  transition: opacity 600ms, box-shadow 600ms;
 }
 .entete__btn:hover {
-  cursor: pointer;
-  opacity: 85%;
+  opacity: 80%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 .order {
@@ -223,6 +224,22 @@ footer {
 .card__heart {
   margin-right: 25px;
 }
+.card__heart--full {
+  position: relative;
+  opacity: 0;
+}
+.card__heart--empty {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 600ms;
+}
+.card__heart:hover .card__heart--empty {
+  opacity: 1;
+}
+.card__heart:hover .card__heart--full {
+  opacity: 1;
+  transition: opacity 600ms;
+}
 
 .pied {
   padding: 22px 0 22px 25px;
@@ -309,16 +326,45 @@ footer {
   margin-top: 20px;
 }
 .menus__choice {
+  position: relative;
+  overflow: hidden;
   background: #FFFFFF;
-  border-radius: 15.0431px;
+  border-radius: 15px;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-  padding: 12px 13px 12px 15px;
+  padding: 12px 0px 12px 15px;
   margin: 0 13px;
+}
+.menus__choice:hover .menus__check {
+  transition: 400ms;
+  right: 0;
+}
+.menus__choice:hover .menus__price {
+  transition: 400ms;
+  right: 74px;
+}
+.menus__check {
+  transition: 400ms;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  color: #F7F7F7;
+  border-radius: 0 15px 15px 0;
+  width: 59px;
+  height: 100%;
+  top: 0;
+  right: -60px;
 }
 .menus__subtitle {
   display: flex;
   justify-content: space-between;
   margin-top: 3px;
+}
+.menus__price {
+  transition: 400ms;
+  position: absolute;
+  right: 15px;
 }
 .menus__btn {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
@@ -333,10 +379,6 @@ footer {
   margin-top: 28px;
   margin-bottom: 40px;
   padding: 13px 16px;
-}
-.menus__btn:hover {
-  cursor: pointer;
-  opacity: 85%;
 }
 
 .menus-pied {

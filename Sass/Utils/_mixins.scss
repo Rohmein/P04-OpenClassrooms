@@ -1,15 +1,11 @@
 @mixin btn {
-    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    background: linear-gradient(0deg, $primary-color, $secondary-color);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     color: white;
     font-weight: 500;
     font-size: 16px;
     border: none;
-    &:hover {
-        cursor: pointer;
-        opacity: 85%;
-    }
 }
 
 @mixin order-btn {
@@ -113,16 +109,45 @@
         margin-top: 20px;
     }
     &__choice {
+        position: relative;
+        overflow: hidden;
         background: $secondary-background;
-        border-radius: 15.0431px;
+        border-radius: 15px;
         box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-        padding: 12px 13px 12px 15px;
+        padding: 12px 0px 12px 15px;
         margin: 0 13px;
+    }
+    .menus__choice:hover &__check {
+        transition: 400ms;
+        right: 0;
+    }
+    .menus__choice:hover &__price {
+        transition: 400ms;
+        right: 74px;
+    }
+    &__check {
+        transition: 400ms;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $light-green;
+        color: $primary-background;
+        border-radius: 0 15px 15px 0;
+        width: 59px;
+        height: 100%;
+        top: 0;
+        right: -60px;
     }
     &__subtitle {
         display: flex;
         justify-content: space-between;
         margin-top: 3px;
+    }
+    &__price {
+        transition: 400ms;
+        position: absolute;
+        right: 15px;
     }
     &__btn {
         @include btn;

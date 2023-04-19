@@ -38,6 +38,11 @@
         margin-top: 27px;
         margin-bottom: 57px;
         padding: 13px 18.75px;
+        transition: opacity 600ms, box-shadow 600ms;
+        &:hover {
+            opacity: 80%;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+        }
     }
 }
 
@@ -111,7 +116,7 @@
             object-position: bottom;
         }
         &__center {
-                object-position: center 61%;
+            object-position: center 61%;
         }
         &__nouveau {
             @include restaurant-badge;
@@ -131,6 +136,22 @@
         }
         &__heart {
             margin-right: 25px;
+            &--full {
+                position: relative;
+                opacity: 0;               
+            }
+            &--empty {
+                position: absolute;
+                opacity: 1;
+                transition: opacity 600ms;
+            }
+            &:hover &--empty {
+                opacity: 1;
+            }
+            &:hover &--full {
+                opacity: 1;
+                transition: opacity 600ms;
+            }
         }
 }
 
