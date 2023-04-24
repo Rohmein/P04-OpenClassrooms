@@ -168,6 +168,7 @@
 
 .menus {
     @include menus-main;
+    transition: transform 350ms ease;
 }
 
 .menus-pied {

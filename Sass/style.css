@@ -309,6 +309,9 @@ footer {
   margin: 14px 0 5px 0;
 }
 
+.menus {
+  transition: transform 350ms ease;
+}
 .menus__photo {
   display: block;
   width: 100%;
