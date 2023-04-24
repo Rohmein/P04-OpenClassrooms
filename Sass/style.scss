@@ -3,6 +3,79 @@
 @import "./Base/base";
 @import "./Layouts/footer";
 
+/*** Loader ***/
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $primary-background;
+    z-index: 100;
+}
+
+.loader--hidden {
+    animation: loading-end 3s forwards;
+}
+
+.loader__wheel {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+    border: 3px solid transparent;
+    border-top-color: $primary-color;
+    border-radius: 50%;
+    animation: loading-wheel 2s linear infinite;
+}
+
+.loader__wheel:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: $secondary-color;
+    animation: loading-wheel 3s linear infinite;
+}
+
+.loader__text {
+    font-size: 24px;
+    font-weight: 700;
+    background-image: linear-gradient(45deg, $secondary-color, $primary-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes loading-wheel {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
+
+@keyframes loading-text {
+
+}
+
+@keyframes loading-end {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 /*** Page d'accueil ***/
 
 .entete {
@@ -166,6 +239,26 @@
     @include menus-header;
 }
 
+.menus__heart {
+        &--full {
+            position: relative;
+            opacity: 0;
+            transition: opacity 600ms;               
+        }
+        &--empty {
+            position: absolute;
+            opacity: 1;
+            transition: opacity 600ms;
+        }
+        &:hover &--empty {
+            opacity: 1;
+        }
+        &:hover &--full {
+            opacity: 1;
+            transition: opacity 600ms;
+        }
+    }
+
 .menus {
     @include menus-main;
     transition: transform 350ms ease;
@@ -176,19 +269,6 @@
 }
 
 /*** Responsive Mobile ≥768px - Accueil ***/
-
-@media screen and (min-width: 768px) {
-    .order {
-        &__title {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        &__nav {
-            width: 70%;
-            margin: auto;
-        }
-    }
-}
 
 /*** Responsive Tablette - Accueil ***/
 
@@ -313,7 +393,8 @@
             padding-top: 51px;
         }
         &__photo {
-            object-position: center 64%;
+            height: 375px;
+            object-position: center 58%;
         }
         &__content {
             margin: -35px 192px 0 193px;
