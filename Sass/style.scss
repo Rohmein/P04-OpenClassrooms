@@ -239,6 +239,30 @@
     @include menus-header;
 }
 
+.title-animation {
+    animation:  slideright 800ms;
+    transform-origin: left 50%;
+}
+
+.title-animation2 {
+    animation:  slideright 600ms 0.9s backwards;
+    transform-origin: left 50%;
+}
+
+.title-animation3 {
+    animation:  slideright 600ms 1.8s backwards;
+    transform-origin: left 50%;
+}
+
+@keyframes slideright {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
 .menus__heart {
         &--full {
             position: relative;
@@ -261,7 +285,59 @@
 
 .menus {
     @include menus-main;
-    transition: transform 350ms ease;
+    &__choice1 {
+        animation:  slidein 400ms 0.3s backwards;
+    }
+    &__choice2 {
+        animation:  slidein 400ms 0.6s backwards;
+    }    
+    &__choice3 {
+        animation:  slidein 400ms 0.9s backwards;
+    }    
+    &__choice4 {
+        animation:  slidein 400ms 1.2s backwards;
+    }    
+    &__choice5 {
+        animation:  slidein 400ms 1.5s backwards;
+    }    
+    &__choice6 {
+        animation:  slidein 400ms 1.8s backwards;
+    }    
+    &__choice7 {
+        animation:  slidein 400ms 2.1s backwards;
+    }    
+    &__choice8 {
+        animation:  slidein 400ms 2.4s backwards;
+    }    
+    &__choice9 {
+        animation:  slidein 400ms 2.7s backwards;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.center-btn {
+    text-align: center;
+    .menus__btn {
+        @include btn;
+        margin: auto;
+        width: 186px;
+        margin-top: 28px;
+        margin-bottom: 40px;
+        padding: 13px 16px;
+        transition: opacity 600ms, box-shadow 600ms;
+        &:hover {
+            opacity: 80%;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+        }
+    }
 }
 
 .menus-pied {

@@ -381,6 +381,29 @@ footer {
   margin: 14px 0 5px 0;
 }
 
+.title-animation {
+  animation: slideright 800ms;
+  transform-origin: left 50%;
+}
+
+.title-animation2 {
+  animation: slideright 600ms 0.9s backwards;
+  transform-origin: left 50%;
+}
+
+.title-animation3 {
+  animation: slideright 600ms 1.8s backwards;
+  transform-origin: left 50%;
+}
+
+@keyframes slideright {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 .menus__heart--full {
   position: relative;
   opacity: 0;
@@ -478,7 +501,46 @@ footer {
   position: absolute;
   right: 15px;
 }
-.menus__btn {
+.menus__choice1 {
+  animation: slidein 400ms 0.3s backwards;
+}
+.menus__choice2 {
+  animation: slidein 400ms 0.6s backwards;
+}
+.menus__choice3 {
+  animation: slidein 400ms 0.9s backwards;
+}
+.menus__choice4 {
+  animation: slidein 400ms 1.2s backwards;
+}
+.menus__choice5 {
+  animation: slidein 400ms 1.5s backwards;
+}
+.menus__choice6 {
+  animation: slidein 400ms 1.8s backwards;
+}
+.menus__choice7 {
+  animation: slidein 400ms 2.1s backwards;
+}
+.menus__choice8 {
+  animation: slidein 400ms 2.4s backwards;
+}
+.menus__choice9 {
+  animation: slidein 400ms 2.7s backwards;
+}
+
+@keyframes slidein {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.center-btn {
+  text-align: center;
+}
+.center-btn .menus__btn {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
@@ -494,11 +556,11 @@ footer {
   padding: 13px 16px;
   transition: opacity 600ms, box-shadow 600ms;
 }
-.menus__btn:hover {
+.center-btn .menus__btn:hover {
   opacity: 80%;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
-.menus__btn:hover {
+.center-btn .menus__btn:hover {
   opacity: 80%;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
