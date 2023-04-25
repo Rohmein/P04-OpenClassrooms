@@ -381,21 +381,6 @@ footer {
   margin: 14px 0 5px 0;
 }
 
-.title-animation {
-  animation: slideright 800ms;
-  transform-origin: left 50%;
-}
-
-.title-animation2 {
-  animation: slideright 600ms 0.9s backwards;
-  transform-origin: left 50%;
-}
-
-.title-animation3 {
-  animation: slideright 600ms 1.8s backwards;
-  transform-origin: left 50%;
-}
-
 @keyframes slideright {
   0% {
     transform: scaleX(0);
@@ -501,32 +486,55 @@ footer {
   position: absolute;
   right: 15px;
 }
+.menus .title-animation {
+  animation: slideright 800ms;
+  transform-origin: left 50%;
+}
+.menus .title-animation2 {
+  animation: slideright 800ms 0.9s backwards;
+  transform-origin: left 50%;
+}
+.menus .title-animation3 {
+  animation: slideright 800ms 1.8s backwards;
+  transform-origin: left 50%;
+}
+.menus .title-animation4 { /*** PLATS - La Note enchantée ***/
+  animation: slideright 800ms 1.2s backwards;
+  transform-origin: left 50%;
+}
+.menus .title-animation5 { /*** DESSERTS - La Note enchantée ***/
+  animation: slideright 800ms 2.1s backwards;
+  transform-origin: left 50%;
+}
 .menus__choice1 {
-  animation: slidein 400ms 0.3s backwards;
+  animation: slidein 450ms 0.3s backwards;
 }
 .menus__choice2 {
-  animation: slidein 400ms 0.6s backwards;
+  animation: slidein 450ms 0.6s backwards;
 }
 .menus__choice3 {
-  animation: slidein 400ms 0.9s backwards;
+  animation: slidein 450ms 0.9s backwards;
 }
 .menus__choice4 {
-  animation: slidein 400ms 1.2s backwards;
+  animation: slidein 450ms 1.2s backwards;
 }
 .menus__choice5 {
-  animation: slidein 400ms 1.5s backwards;
+  animation: slidein 450ms 1.5s backwards;
 }
 .menus__choice6 {
-  animation: slidein 400ms 1.8s backwards;
+  animation: slidein 450ms 1.8s backwards;
 }
 .menus__choice7 {
-  animation: slidein 400ms 2.1s backwards;
+  animation: slidein 450ms 2.1s backwards;
 }
 .menus__choice8 {
-  animation: slidein 400ms 2.4s backwards;
+  animation: slidein 450ms 2.4s backwards;
 }
 .menus__choice9 {
-  animation: slidein 400ms 2.7s backwards;
+  animation: slidein 450ms 2.7s backwards;
+}
+.menus__choice10 {
+  animation: slidein 450ms 3s backwards;
 }
 
 @keyframes slidein {
